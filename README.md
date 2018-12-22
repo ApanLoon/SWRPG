@@ -22,7 +22,8 @@ Republic with influences from The Old Republic MMO.
     * Social status
     * Basic training
       * Basic mental attributes
-      * Basic skill set
+      * Basic skills
+      * Basic action set
   * Faction
     * Selection
     * Different cut sequence depending on faction, typically arriving
@@ -32,8 +33,15 @@ Republic with influences from The Old Republic MMO.
   * Planet 1..n
     * Arrival cut scene
     * Play area
+      * Item damage - Tools, clothing and equipment may be damaged in
+        combat or from wear
       * Companion 1..n
         * Selection of x active companions from a pool of n
+      * NPC
+        * Loot
+          * The items the NPC carries/uses will be found when looting
+            the body
+          * A small number of other small items may be randomly looted
       * Speeder
         * A speeder can NOT be put in your pocket, getting off it will
           park it in-world. Leaving it will make it stay where you left
@@ -63,7 +71,7 @@ the droid and the hover sled can't negotiate.
   to move them short distances into a stash. Non, Force users would have to
   call the droid and help it load the item on the hover sled. 
       
-## UI
+### UI
 * Generic Window
   * Title/drag bar
     * Hide/Show - Shrink/expand window content
@@ -73,9 +81,29 @@ the droid and the hover sled can't negotiate.
   * DragTarget - With list of acceeptable types
   * Draggable - With list of types
 * ActionBar - Small window with no title bar and a GridWidget
-  * Lockabble - if locked, drag and drop actions are not triggered
-  * DragTargets allow only useable items (actions, special tools and
+  * Lockable - if locked, drag and drop actions are not triggered
+  * DragTargets allow only useable items (Actions, special tools and
     consumables)
-  * Left-clicking a drag target makes the player use the action/item
+  * Left-clicking a drag target makes the player use the Actions/item
 * InventoryWindow - Window with title bar and a GridWidget
   * Right-clicking makes the player use the item if it is usable
+
+## Model
+## Character
+* Name
+* Species
+* Gender
+* Home planet
+* Faction
+* Level
+* Physical attributes (morphs)
+* Attributes (Base DnD attributes like STR, INT, etc)
+* HP
+* Max HP
+* Skills (Computed attributes such as Demolision, Computer proficiency, etc.)
+* Actions
+* Inventory
+## Player : Character
+* Ship
+## Companion : Character
+* Influence from player
