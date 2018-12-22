@@ -56,19 +56,39 @@ Republic with influences from The Old Republic MMO.
       want to access cargo hold or re-group without actually leaving
     * Loading droid with hover sled for large cargo
     * Play area
+    
 ## Systems
+### Behaviour
+When characters are controlled automatically, i.e not controlled directly by the player, their behaviour is controlled by a state machine. This includes NPCs, Companions and even the Player character when the player is controlling a Companion.
+* State examples
+  * IDLE
+  * TRAVEL
+    Destination could be HOME, WORKPLACE or the location of an item or
+    person that the character follows. The routing may be galaxy wide,
+    use local transportation, in-system shuttles or even passenger star
+    ships to reach the destination.
+  * STATIONARY_WORK
+    * MARKET_VENDOR
+    * FACTORY_WORKER
+    * STAND_GUARD
+    * PATROL_GUARD
+  * COMBAT
+
 ### Inventory
-You can only carry a small number of small items with you constantly and
-over-encumberancs completely nullifies your ability to fight. However, you
-can use a small cloaking device to mask an area where you can temporarily
-stash items and order your ship droid to collect the items using a hover
-sled that comes with your star ship. The droid can only get to the stash
-if the way from the ship to it does not require any special skills that
-the droid and the hover sled can't negotiate.
-* A mechanic where thieves could detect and slice your cloaking shield to
-  steal the items you stash
+Characters, including NPCs, can carry a small number of small items
+constantly and over-encumberancs completely nullifies their ability to
+fight. However, a simple Action that all Characters have is to drop their
+back pack. Advanced versions of this Action uses a small cloaking device
+to mask an area where items can be stashed. 
+The Player's ship droid can be asked to collect the items using a hover
+sled that comes with the Player's star ship. The droid can only get to
+the stash if the way from the ship to it does not require any special
+skills that the droid and the hover sled can't negotiate.
+* A possible mechanic could be to allow other Characters to detect and slice
+  cloaked stashes and steal the items. Players, Companions as well as NPCs
+  could use this mechanic.
 * It is impossible to carry large items, however, a Force user might be able
-  to move them short distances into a stash. Non, Force users would have to
+  to move them short distances into a stash. Non-Force users would have to
   call the droid and help it load the item on the hover sled. 
       
 ### UI
@@ -78,7 +98,7 @@ the droid and the hover sled can't negotiate.
   * Content with "widgets"
 * Grid widget - A grid of slots
   * Grid slot
-  * DragTarget - With list of acceeptable types
+  * DragTarget - With list of acceptable types
   * Draggable - With list of types
 * ActionBar - Small window with no title bar and a GridWidget
   * Lockable - if locked, drag and drop actions are not triggered
@@ -95,9 +115,10 @@ the droid and the hover sled can't negotiate.
 * Gender
 * Home planet
 * Faction
+* Social standing
 * Level
 * Physical attributes (morphs)
-* Attributes (Base DnD attributes like STR, INT, etc)
+* Attributes (Base DnD-type attributes like STR, INT, etc)
 * HP
 * Max HP
 * Skills (Computed attributes such as Demolision, Computer proficiency, etc.)
