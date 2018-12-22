@@ -46,6 +46,7 @@ Republic with influences from The Old Republic MMO.
   * Ship 1..n
     * Boarding a ship does NOT automaically take off. You might just
       want to access cargo hold or re-group without actually leaving
+    * Loading droid with hover sled for large cargo
     * Play area
 ## Systems
 ### Inventory
